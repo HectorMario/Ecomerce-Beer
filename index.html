@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./svg/menu.svg" alt="">
+            <img src="./svg/logo.svg" alt="">
+        </div>
+        <div class="right">
+            <img src="./svg/search.svg" alt="">
+            <img src="./svg/cart.svg" alt="">
+        </div>
+    </header>
+    <main>
+        <section class="list">
+            <h1>Bear</h1>
+            <script id="render" type="text/x-handlebars-template">
+                {{#each products}}
+                <div class="card" id="{{filterId}}">
+                    <div class="img">
+                        <img src="./img/{{img}}" alt="{{name}}">
+                    </div>
+                    <div class="info">
+                        <strong>{{name}}</strong>
+                        <p>{{description}}</p>
+                        <span>{{price}}</span>
+                    </div>
+                    <button>Add</button>
+                </div>
+                {{/each}}
+            </script>
+            <div id="output" class="products">
+
+            </div>
+            <div class="paginator">
+                <button class="left-button paginator"><img src="./svg/arrow-right.svg" alt="arrow-right"></button>
+                <button class="paginator right-button"><img src="./svg/arrow-right.svg" alt="arrow-right"></button>
+            </div>
+            <div class="wines">
+                <div class="instructions">
+                    <p>Continue shopping</p>
+                    <h3>Wines</h3>
+                </div>
+                <span><img src="./svg/arrow-right.svg" alt="arrow-right"></span>
+            </div>
+        </section>
+        <section class="help">
+            <strong>Can we help you?</strong>
+            <div class="options">
+                <div class="option">
+                    <div class="icon">
+                        <img src="./svg/intercom.svg" alt="">
+                    </div>
+                    <strong>CHAT</strong>
+                </div>
+                <div class="option">
+                    <div class="icon">
+                        <img src="./svg/phone.svg" alt="">
+                    </div>
+                    <strong>CALL</strong>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <section class="about-us">
+                <ul>
+                    <li>
+                        <strong>
+                            About us
+                        </strong>
+                    </li>
+                    <li>
+                        <strong>
+                            Covid-19
+                        </strong>
+                    </li>
+                    <li>
+                        <strong>
+
+                            How buy
+                        </strong>
+                    </li>
+                    <li>
+                        <strong>
+
+                            Contact
+                        </strong>
+                    </li>
+                    <li>
+                        <strong>
+                            Zone
+                        </strong>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+        <div class="modal d-none">
+            <div class="options">
+                <h2>Filters</h2>
+                <ul>
+                    <li>
+                        <span>
+                            Gold
+                        </span>
+                        <input type="checkbox" name="" id="gold">
+                    </li>
+                    <li>
+                        <span>
+                            Red
+                        </span>
+                        <input type="checkbox" name="" id="red">
+                    </li>
+                    <li>
+                        <span>
+                            brown
+                        </span>
+                        <input type="checkbox" name="" id="brwon">
+                    </li>
+                </ul>
+                <div class="buttons">
+                    <button>
+                        <strong>Clean</strong>
+                    </button>
+                    <button>
+                        <strong>Filter</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="filter toggle"><strong>FILTER</strong> <img src="./svg/filters.svg" alt=""></button>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
