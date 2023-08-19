@@ -22,7 +22,7 @@
     </header>
     <main>
         <section class="list">
-            <h1>Bear</h1>
+            <h1>Beers</h1>
             <script id="render" type="text/x-handlebars-template">
                 {{#each products}}
                 <div class="card" id="{{filterId}}">
@@ -103,40 +103,45 @@
                 </ul>
             </section>
         </footer>
-        <div class="modal d-none">
+        <div class="modal" id="modal">
             <div class="options">
                 <h2>Filters</h2>
                 <ul>
                     <li>
-                        <span>
-                            Gold
-                        </span>
-                        <input type="checkbox" name="" id="gold">
+                        <label for="gold">
+                            <span>
+                                Gold
+                            </span>
+                        </label>
+                        <input type="checkbox" name="gold" id="gold" value="1">
                     </li>
                     <li>
-                        <span>
-                            Red
-                        </span>
-                        <input type="checkbox" name="" id="red">
+                        <label for="red">
+                            <span>
+                                Red
+                            </span>
+                        </label>
+                        <input type="checkbox" name="red" id="red" value="2">
                     </li>
                     <li>
-                        <span>
-                            brown
-                        </span>
-                        <input type="checkbox" name="" id="brwon">
+                        <label for="brown">
+                            <span>
+                                brown
+                            </span>
+                        </label>
+                        <input type="checkbox" name="brown" id="brown" value="3">
                     </li>
                 </ul>
                 <div class="buttons">
                     <button>
                         <strong>Clean</strong>
                     </button>
-                    <button>
-                        <strong>Filter</strong>
-                    </button>
+                    <button class=""><strong>FILTER</strong> <img src="./svg/filters.svg" alt="" id="activateFilter"></button>
                 </div>
+                <button class="close"><img src="./svg/close.svg" alt=""></button>
             </div>
         </div>
-        <button class="filter toggle"><strong>FILTER</strong> <img src="./svg/filters.svg" alt=""></button>
+        <button id="filter" class="filter toggle"><strong>FILTER</strong> <img src="./svg/filters.svg" alt=""></button>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="./script.js" type="module"></script>

@@ -2,6 +2,17 @@
     margin: 0
     padding: 0
     box-sizing: border-box
+    ::-webkit-scrollbar
+        width: 10px
+        border-radius: 20px
+
+    ::-webkit-scrollbar-track
+        background: #f1f1f1
+        border-radius: 20px
+
+    ::-webkit-scrollbar-thumb
+        border-radius: 20px
+        background: #888
     body
         header
             padding: 10px
@@ -15,8 +26,9 @@
                     padding: 3px
                     fill: white
         main
-            overflow: scroll
+            overflow-y: scroll
             height: calc(100vh - 70px)
+
             section
                 display: flex
                 flex-direction: column
@@ -71,7 +83,7 @@
                     cursor: pointer
                     width: 20px
                     .left-button
-                        transform: rotate(180deg)   
+                        transform: rotate(180deg)
                 .wines
                     display: flex
                     justify-content: space-between
@@ -109,7 +121,7 @@
                 border: none
                 bottom: 1%
                 width: calc(10vw + 3.5rem)
-                height: calc(2vw + 1rem)
+                height: calc(2vw + 1.6rem)
                 right: calc(50% - 50px)
                 border-radius: 5px
                 display: flex
@@ -126,24 +138,28 @@
                     justify-content: center
                     ul
                         text-align: center
-                        list-style: none  
+                        list-style: none
                         li
                             padding: 5px 0
             .modal
-                display: flex
+                display: none
                 align-items: end
                 height: 100vh
-                background-color:  rgb(0,0,0, .6)
+                background-color: rgb(0,0,0, .6)
                 position: absolute
                 top: 0
                 z-index: 5555
                 width: 100%
+            .show
+                display: flex
                 .options
+                    z-index: 55555
                     background-color: white
-                    height: 225 px
+                    height: 230px
                     width: 100%
-                    h2 
-                        padding: 10px 0  
+                    position: relative
+                    h2
+                        padding: 10px 0
                     ul
                         padding: 0px 5px
                         li
@@ -155,12 +171,31 @@
                             justify-content: space-between
                     .buttons
                         display: flex
-                        background-color: gray
+                        background-color: rgb(192,192,192)
                         justify-content: center
-                        gap: 15px
-                        height: 33px
+                        gap: 30px
+                        padding: 7px 0
                         button
                             width: 40%
-                            padding: 5px 0
-
-
+                            background-color: #00008B
+                            color: white
+                            border: none
+                            bottom: 1%
+                            height: calc(2vw + 1.6rem)
+                            right: calc(50% - 50px)
+                            border-radius: 5px
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            font-size: calc(1vw + .5rem)
+                            cursor: pointer
+                    .close
+                        position: absolute
+                        padding: 5px
+                        right: 0
+                        top: calc(0% - 20px)
+                        margin-right: 10px
+                        background-color: white
+                        border: 1px solid gray
+                        border-radius: 5px
+                        cursor: pointer
